@@ -9,4 +9,12 @@ describe("Automation test store",()=>{
         cy.get('#ContactUsFrm_enquiry').type("What is your favorite framework?") 
         cy.get("button[title='Submit']").click();
     })
+    it.only("Automation test for contact us form with Xpath selectors",()=>{
+        cy.visit("https://www.automationteststore.com/");
+        cy.xpath("//a[contains(@href,'contact')]").click();
+        // cy.get('#ContactUsFrm_first_name').type("Szymon");
+        // cy.get('#ContactUsFrm_email').type("test@wp.pl");
+        // cy.get('#ContactUsFrm_enquiry').type("What is your favorite framework?") 
+        // cy.get("button[title='Submit']").click();
+    })
 })
